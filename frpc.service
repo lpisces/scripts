@@ -1,0 +1,11 @@
+[Unit]
+Description=FRP-Proxy
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/local/bin/frpc -c /etc/frpc.ini
+
+[Install]
+WantedBy=multi-user.target
